@@ -8,7 +8,6 @@ public enum EntityType {
     PROJET,
     AXE,
     PILIER,
-    DEPARTEMENT,
-    COMMUNE,
-    MEDIA
+    MEDIA,
+    SECTEUR
 }
