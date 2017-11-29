@@ -94,6 +94,8 @@ public class NativeQueryResultsMapper {
         return fields;
     }
 
+
+
     private static <T> Field getFieldByName(String fieldName, Class<T> genericType) {
         List<Field> fields = FieldUtils.getFieldsListWithAnnotation(genericType, NativeQueryResultColumn.class);
 
