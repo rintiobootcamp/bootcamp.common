@@ -1,9 +1,7 @@
 /**
  * Created by darextossa on 11/19/17.
  */
-
 package com.bootcamp.commons.models;
-
 
 import com.bootcamp.commons.utils.DatabaseUtils;
 
@@ -46,10 +44,11 @@ public class Criteria {
         this.linkOperator = linkOperator;
     }
 
-    public String getAsStringQuery(String entityPrefix){
-        if(DatabaseUtils.isNullOrEmpty(linkOperator))
+    public String getAsStringQuery(String entityPrefix) {
+        if (DatabaseUtils.isNullOrEmpty(linkOperator)) {
             return rule.getAsStringQuery(entityPrefix);
-        else
-            return rule.getAsStringQuery(entityPrefix)+" "+linkOperator;
+        } else {
+            return rule.getAsStringQuery(entityPrefix) + " " + linkOperator;
+        }
     }
 }
