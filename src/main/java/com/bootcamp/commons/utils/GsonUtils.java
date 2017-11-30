@@ -15,6 +15,11 @@ public class GsonUtils {
         return gson.fromJson(json, theClass);
     }
 
+    public static <T> T getObjectFromJson(String json, Type type) throws IOException {
+        Gson gson = new GsonBuilder().enableComplexMapKeySerialization().create();
+        return gson.fromJson(json, type);
+    }
+
     public static <T> T fromJSON(Reader reader, Class<T> theClass) throws IOException {
         return new Gson().fromJson(reader, theClass);
     }
@@ -22,4 +27,6 @@ public class GsonUtils {
     public static <T> T fromJSON(Reader reader, Type type) throws IOException {
         return new Gson().fromJson(reader, type);
     }
+
+
 }
