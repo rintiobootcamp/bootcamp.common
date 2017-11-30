@@ -8,7 +8,6 @@ import java.lang.annotation.Target;
 /**
  * Created by darextossa on 11/20/17.
  */
-
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface NativeQueryResultEntity {

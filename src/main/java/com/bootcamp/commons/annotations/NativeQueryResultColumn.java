@@ -8,10 +8,10 @@ import java.lang.annotation.Target;
 /**
  * Created by darextossa on 11/20/17.
  */
-
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface NativeQueryResultColumn {
+
     public enum COLUMNTYPE {
         SIMPLE, COMPLEX
     }

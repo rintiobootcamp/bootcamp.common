@@ -26,8 +26,8 @@ public class DatabaseException extends Exception {
     @Override
     public String getMessage() {
         String message = super.getMessage() + " ";
-        if(stackTraceElements != null || stackTraceElements.length!=0){
-            for (StackTraceElement stackTraceElement: stackTraceElements) {
+        if (stackTraceElements != null || stackTraceElements.length != 0) {
+            for (StackTraceElement stackTraceElement : stackTraceElements) {
                 message = message + stackTraceElement.toString() + " ";
             }
         }

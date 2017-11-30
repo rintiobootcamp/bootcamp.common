@@ -4,6 +4,7 @@ package com.bootcamp.commons.models;
  * Created by darextossa on 11/19/17.
  */
 public class Rule {
+
     private String column;
     private String operator;
     private Object value;
@@ -41,8 +42,8 @@ public class Rule {
         this.value = value;
     }
 
-    public String getAsStringQuery(String entityPrefix){
-        return entityPrefix+"."+column+" "+operator+" '"+value+"'";
+    public String getAsStringQuery(String entityPrefix) {
+        return entityPrefix + "." + column + " " + operator + " '" + value + "'";
     }
 
 }
