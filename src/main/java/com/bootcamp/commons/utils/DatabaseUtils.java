@@ -6,6 +6,6 @@ package com.bootcamp.commons.utils;
 public class DatabaseUtils {
 
     public static boolean isNullOrEmpty(String str){
-        return (str ==null ||str!="" || str!=" ");
+        return (str ==null ||str=="" || str==" ");
     }
 }
