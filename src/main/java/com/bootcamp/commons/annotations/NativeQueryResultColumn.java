@@ -14,8 +14,10 @@ public @interface NativeQueryResultColumn {
 
     public enum COLUMNTYPE {
         SIMPLE, COMPLEX
+        //LIST
     }
 
     COLUMNTYPE columnType() default COLUMNTYPE.SIMPLE;
+    //Class classReference() default String.class;
 
 }

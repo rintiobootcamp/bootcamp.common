@@ -8,6 +8,8 @@ import java.util.List;
  */
 public class Criterias {
 
+    private Class entityClass;
+
     private List<Criteria> criteriaList;
 
     public Criterias() {
@@ -28,6 +30,9 @@ public class Criterias {
     public String getAsStringQuery(String entityPrefix) {
         String str = "";
         for (Criteria criteria : criteriaList) {
+            if(entityClass != null)
+                criteria.setEntityClass(entityClass);
+
             str = str + criteria.getAsStringQuery(entityPrefix);
         }
         return str;
@@ -38,5 +43,13 @@ public class Criterias {
             criteriaList = new ArrayList<Criteria>();
         }
         criteriaList.add(criteria);
+    }
+
+    public Class getEntityClass() {
+        return entityClass;
+    }
+
+    public void setEntityClass(Class entityClass) {
+        this.entityClass = entityClass;
     }
 }

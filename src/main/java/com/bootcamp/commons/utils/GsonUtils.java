@@ -28,5 +28,10 @@ public class GsonUtils {
         return new Gson().fromJson(reader, type);
     }
 
+    public static String toJSONWithoutClassName(Object object) {
+        Gson gson = new GsonBuilder().enableComplexMapKeySerialization().setPrettyPrinting().create();
+        return gson.toJson(object);
+    }
+
 
 }

@@ -7,6 +7,7 @@ import com.bootcamp.commons.utils.DatabaseUtils;
 
 public class Criteria {
 
+    private Class entityClass;
     private Rule rule;
     private String linkOperator;
 
@@ -45,10 +46,21 @@ public class Criteria {
     }
 
     public String getAsStringQuery(String entityPrefix) {
+        if(entityClass != null)
+            rule.setEntityClass(entityClass);
+
         if (DatabaseUtils.isNullOrEmpty(linkOperator)) {
             return rule.getAsStringQuery(entityPrefix);
         } else {
             return rule.getAsStringQuery(entityPrefix) + " " + linkOperator;
         }
+    }
+
+    public Class getEntityClass() {
+        return entityClass;
+    }
+
+    public void setEntityClass(Class entityClass) {
+        this.entityClass = entityClass;
     }
 }
