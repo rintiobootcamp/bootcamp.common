@@ -52,7 +52,7 @@ public class Criteria {
         if (DatabaseUtils.isNullOrEmpty(linkOperator)) {
             return rule.getAsStringQuery(entityPrefix);
         } else {
-            return rule.getAsStringQuery(entityPrefix) + " " + linkOperator;
+            return rule.getAsStringQuery(entityPrefix) + " " + linkOperator +" ";
         }
     }
 
