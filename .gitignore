@@ -27,6 +27,8 @@ hs_err_pid*
 /.idea/
 /build/
 /nbproject/
+/log/
+/logs/
 /target/
 
-commons.iml
+*.iml
