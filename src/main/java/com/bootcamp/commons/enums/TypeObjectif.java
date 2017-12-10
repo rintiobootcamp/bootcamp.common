@@ -9,10 +9,8 @@ package com.bootcamp.commons.enums;
  *
  * @author Moh
  */
-public enum TypeImpact {
-    EMPLOIS,
-    IDE,
-    EXPORTS,
-    PIB,
+public enum TypeObjectif{
+    STRATEGIQUE,
+    OPERATIONNEL,
     AUTRES;
 }
