@@ -20,6 +20,17 @@ public class NativeQueryResultsMapper {
 
     private static Logger logger = LogManager.getLogger(NativeQueryResultsMapper.class);
 
+    /**
+     * Map a jpql result in the adequate object list
+     * @param <T>
+     * @param objectArrayList
+     * @param fields
+     * @param genericType
+     * @return
+     * @throws IllegalAccessException
+     * @throws DatabaseException
+     * @throws InvocationTargetException
+     */
     public static <T> List<T> map(List<Object[]> objectArrayList, List<String> fields, Class<T> genericType) throws IllegalAccessException, DatabaseException, InvocationTargetException {
         List<T> ret = new ArrayList<T>();
         for (Object[] objectArr : objectArrayList) {
@@ -98,6 +109,18 @@ public class NativeQueryResultsMapper {
 //
 //        return t;
 //    }
+
+    /**
+     * Map a jpql result in the adequate object
+     * @param <T>
+     * @param object
+     * @param fieldNames
+     * @param genericType
+     * @return
+     * @throws DatabaseException
+     * @throws InvocationTargetException
+     * @throws IllegalAccessException
+     */
 
     public static <T> T map(Object[] object, List<String> fieldNames, Class<T> genericType) throws DatabaseException, InvocationTargetException, IllegalAccessException {
         T t;
@@ -183,14 +206,26 @@ public class NativeQueryResultsMapper {
     }
 
     // Get ordered list of fields
+
+    /**
+     *
+     * @param <T>
+     * @param genericType
+     * @return
+     */
     public static <T> List<Field> getNativeQueryResultColumnAnnotatedFields(Class<T> genericType) {
         List<Field> fields = FieldUtils.getFieldsListWithAnnotation(genericType, NativeQueryResultColumn.class);
 
         return fields;
     }
 
-
-
+    /**
+     * Get the jpql result field by name
+     * @param <T>
+     * @param fieldName
+     * @param genericType
+     * @return
+     */
     public static <T> Field getFieldByName(String fieldName, Class<T> genericType) {
         List<Field> fields = FieldUtils.getFieldsListWithAnnotation(genericType, NativeQueryResultColumn.class);
 
