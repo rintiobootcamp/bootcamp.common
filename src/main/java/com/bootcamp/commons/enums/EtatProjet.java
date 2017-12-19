@@ -12,19 +12,9 @@ package com.bootcamp.commons.enums;
 public enum EtatProjet {
 
     /**
-     * The project state PRE_ETUDE
+     * The project state NON_DEMARRE
      */
-    PRE_ETUDE,
-
-    /**
-     * The project state FINANCEMENT
-     */
-    FINANCEMENT,
-
-    /**
-     * The project state RECRUTEMENT_FOURNISSEUR
-     */
-    RECRUTEMENT_FOURNISSEUR,
+    NON_DEMARRE,
 
     /**
      * The project state EXECUTION
