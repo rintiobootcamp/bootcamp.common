@@ -12,11 +12,27 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface NativeQueryResultColumn {
 
+    /**
+     *Enumeration use to specify if an entity attribute is simple or complex (another entity that migrates)
+     */
     public enum COLUMNTYPE {
-        SIMPLE, COMPLEX
+
+        /**
+         * Specify that the attribute has not migrate from another entity
+         */
+        SIMPLE,
+
+        /**
+         *Specify that the attribute has migrate from another entity
+         */
+        COMPLEX
         //LIST
     }
 
+    /**
+     * Set the default type to SIMPLE
+     * @return
+     */
     COLUMNTYPE columnType() default COLUMNTYPE.SIMPLE;
     //Class classReference() default String.class;
 

@@ -10,11 +10,39 @@ package com.bootcamp.commons.enums;
  * @author Iso-Doss
  */
 public enum EtatProjet {
+
+    /**
+     * The project state PRE_ETUDE
+     */
     PRE_ETUDE,
+
+    /**
+     * The project state FINANCEMENT
+     */
     FINANCEMENT,
+
+    /**
+     * The project state RECRUTEMENT_FOURNISSEUR
+     */
     RECRUTEMENT_FOURNISSEUR,
+
+    /**
+     * The project state EXECUTION
+     */
     EXECUTION,
+
+    /**
+     * The project state ABANDONNE
+     */
     ABANDONNE,
+
+    /**
+     * The project state SUSPENDU
+     */
     SUSPENDU,
+
+    /**
+     * The project state ACHEVE
+     */
     ACHEVE;
 }

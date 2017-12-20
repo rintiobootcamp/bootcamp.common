@@ -10,7 +10,19 @@ package com.bootcamp.commons.enums;
  * @author Moh
  */
 public enum TypeObjectif{
+
+    /**
+     * The project object type STRATEGIQUE
+     */
     STRATEGIQUE,
+
+    /**
+     * The project object type OPERATIONNEL
+     */
     OPERATIONNEL,
+
+    /**
+     * The project object type AUTRES
+     */
     AUTRES;
 }
