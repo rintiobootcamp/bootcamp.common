@@ -9,5 +9,7 @@ public enum EntityType {
     AXE,
     PILIER,
     MEDIA,
-    SECTEUR
+    SECTEUR,
+    QUESTION,
+    DEBAT
 }
