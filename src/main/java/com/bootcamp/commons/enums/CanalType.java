@@ -8,6 +8,7 @@ package com.bootcamp.commons.enums;
 /**
  *
  * @author edwigegédéon
+ * listing all the possible ways to be notified for a user
  */
 public enum CanalType {
     SMS,
