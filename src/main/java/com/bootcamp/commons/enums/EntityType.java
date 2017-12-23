@@ -37,7 +37,10 @@ public enum EntityType {
      * The entity Debat
      */
     DEBAT,
-
+    /**
+     * The entity Debat
+     */
+    NOTIFICATION,
     /**
      * The entity Commentaire
      */
