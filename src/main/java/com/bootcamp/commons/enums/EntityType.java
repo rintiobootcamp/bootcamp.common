@@ -45,6 +45,26 @@ public enum EntityType {
      * The entity Commentaire
      */
 
-    COMMENTAIRE
+    COMMENTAIRE,
+    /**
+     * The entity Sondage
+     */
+
+    SONDAGE,
+    /**
+     * The entity Forum
+     */
+
+    FORUM,
+    /**
+     * The entity Note
+     */
+
+    NOTE,
+    /**
+     * The entity Region
+     */
+
+    REGION
 
 }
